@@ -1,0 +1,12 @@
+body{
+    background: #6B8056;
+}
+
+.card
+{
+    width: 800px;
+    background: #768948;
+    color: aliceblue;
+    border: 1px solid #768948;
+    box-shadow: 10px 5px 5px black;
+}

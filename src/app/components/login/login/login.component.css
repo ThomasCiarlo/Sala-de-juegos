@@ -1,0 +1,11 @@
+.container
+{
+    border: 1px solid #768948;
+    box-shadow: 10px 10px 10px 10px black;
+    padding: 10px;
+}
+
+button
+{
+    margin-left: 10px;
+}
