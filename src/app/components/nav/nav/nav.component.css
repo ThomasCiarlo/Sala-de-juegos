@@ -55,25 +55,20 @@ nav {
   -webkit-box-shadow: #32371a 0 -10px 40px -10px inset;
   box-shadow: #32371a 0 -10px 40px -10px inset;
 }
-nav:before {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 40px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 40px 0;
-  box-shadow: rgba(0, 0, 0, 0.6) 0 0 40px 0;
-}
+
 nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
   position: relative;
   z-index: 10;
 }
 nav ul li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   padding: 0 5px;
   float: left;
   list-style: none;
