@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MyLifeComponent } from '../../myLife/my-life/my-life.component';
-import { HomeComponent } from '../../home/home/home.component';
-import { Route } from '@angular/router';
-import { FormControl, FormGroup } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { LoginService } from 'src/app/service/login.service';
 

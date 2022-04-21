@@ -44,4 +44,4 @@ import { RegisterComponent } from './components/register/register/register.compo
 export class AppModule 
 {
   
- }
+}
