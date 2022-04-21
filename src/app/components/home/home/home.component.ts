@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavComponent } from '../../nav/nav/nav.component';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-home',
@@ -12,5 +13,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

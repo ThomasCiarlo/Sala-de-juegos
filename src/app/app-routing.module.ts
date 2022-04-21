@@ -5,9 +5,11 @@ import { MyLifeComponent } from './components/myLife/my-life/my-life.component';
 import { NotfoundComponent } from './Errores/notfound/notfound.component';
 import { JuegosComponent } from './components/Juegos/juegos/juegos.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { RegisterComponent } from './components/register/register/register.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent },
   {path:'mylife',component:MyLifeComponent},
   {path: 'juegos', component:JuegosComponent},

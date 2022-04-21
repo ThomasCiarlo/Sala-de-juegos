@@ -6,11 +6,11 @@ import { LoginService } from 'src/app/service/login.service';
 import { Usuario } from 'src/app/Entidades/usuario';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   email: string = '';
   password: string = '';
@@ -21,23 +21,19 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   })
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private firebase: LoginService
-    ) {
-      this.usuario = new Usuario(firebase,router);
+  constructor(private firebase: LoginService, private router: Router) 
+  {
+      this.usuario = new Usuario(firebase, router)
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  async onLogin(){
+  registro(){
     this.usuario.email = this.email;
-    this.usuario.password = this.password;
+    this.usuario.password = this.password
 
-    this.usuario.Login();
+    this.usuario.registro();
   }
-
 
 }

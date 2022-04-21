@@ -118,3 +118,24 @@ nav ul li a:hover:before, nav ul li a.current:before {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 35px 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 35px 0;
 }
+
+.botones
+{
+  background-color: #a87f59;
+  color: white;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#desconectar
+{
+  display: none;
+  background-color: #a87f59;
+  color: white;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 10px;
+}
