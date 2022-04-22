@@ -1,7 +1,12 @@
 <div class="d-flex flex-row bd-highlight">
-    <button  class="botones" id="login" (click)="redirigir()">Login</button>
+  <div *ngIf="estaLogeado">
     <button  class="botone" id="desconectar" (click)="desconectar()">Desconectar</button>
+  </div>
+
+  <div *ngIf="!estaLogeado">
+    <button  class="botones" id="login" (click)="redirigir()">Login</button>
     <button class="botones" id="Registrarse" (click)="registrarse()">Registrarse</button>
+  </div>
 </div>
 
 <nav>

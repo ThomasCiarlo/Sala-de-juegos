@@ -27,7 +27,7 @@ import { RegisterComponent } from './components/register/register/register.compo
     MyLifeComponent,
     NotfoundComponent,
     JuegosComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

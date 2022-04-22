@@ -38,15 +38,15 @@ export class Usuario {
       redirigirLogin()
       {
         this.router.navigate(['/juegos']);
-        const login = document.getElementById("login");
-        const regis = document.getElementById("Registrarse");
-        const desc = document.getElementById("desconectar");
-        if(login != null)
-          login.style.display = 'none';
-        if(regis != null)  
-          regis.style.display = 'none';
-        if(desc != null)
-         desc.style.display = 'block';
+        // const login = document.getElementById("login");
+        // const regis = document.getElementById("Registrarse");
+        // const desc = document.getElementById("desconectar");
+        // if(login != null)
+        //   login.style.display = 'none';
+        // if(regis != null)  
+        //   regis.style.display = 'none';
+        // if(desc != null)
+        //  desc.style.display = 'block';
       }
 
 }

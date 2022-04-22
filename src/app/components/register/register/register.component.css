@@ -1,11 +1,13 @@
 .cuadro{
 
-    border:  1px solid white;
-    border-radius: 10px;
+    border-bottom:  1px solid black;
+    border-radius: 50px;
     width: 500px;
     padding: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    box-shadow: 10px 5px 5px black;
+    background-color: #768948;
+    color: #e4e8ce;
+    box-shadow: #32371a 0 -10px 40px -10px inset;
 }
 
 h2

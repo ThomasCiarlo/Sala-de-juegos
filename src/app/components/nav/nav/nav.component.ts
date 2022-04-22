@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { LoginService } from 'src/app/service/login.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -10,13 +11,20 @@ import { LoginService } from 'src/app/service/login.service';
 
 export class NavComponent implements OnInit {
 
+  usuarioConectado$: Observable<any> = this.firebase.afAuth.user;
+  estaLogeado: boolean = false;
+
   constructor(private route: ActivatedRoute,
     private router: Router, private firebase: LoginService) 
     {
-
+      
     }
 
   ngOnInit(): void {
+    this.usuarioConectado$.subscribe(usuario => {
+      this.estaLogeado = (usuario) ? true : false;
+      console.log(this.estaLogeado);
+    })
   }
 
   redirigir() {
@@ -45,5 +53,6 @@ export class NavComponent implements OnInit {
         desc.style.display = 'block';
     }
   }
+
 
 }
