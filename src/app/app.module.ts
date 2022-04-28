@@ -9,7 +9,6 @@ import { NavComponent } from './components/nav/nav/nav.component';
 import { MyLifeComponent } from './components/myLife/my-life/my-life.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotfoundComponent } from './Errores/notfound/notfound.component';
-import { JuegosComponent } from './components/Juegos/juegos/juegos.component';
 import { LoginComponent } from './components/login/login/login.component';
 
 import { LoginService } from './service/login.service';
@@ -17,6 +16,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/register/register/register.component';
+import { AhorcadoComponent } from './modules/Juegos/ahorcado/ahorcado.component';
+import { MayorMenorComponent } from './modules/Juegos/mayor-menor/mayor-menor.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { RegisterComponent } from './components/register/register/register.compo
     NavComponent,
     MyLifeComponent,
     NotfoundComponent,
-    JuegosComponent,
     RegisterComponent,
+    AhorcadoComponent,
+    MayorMenorComponent,
   ],
   imports: [
     BrowserModule,
