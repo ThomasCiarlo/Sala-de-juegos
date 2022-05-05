@@ -1,0 +1,24 @@
+.container
+{
+   margin: 0 auto;
+   padding: 10px;
+   border-radius: 10px;
+   background-image: url(/assets/img/preguntados/back.jpg);
+   background-repeat: no-repeat;
+   background-size: 1500px;
+}
+
+.boton
+{
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   background: transparent;
+   
+}
+
+img
+{
+   width: 130px;
+   height: 130px;
+}

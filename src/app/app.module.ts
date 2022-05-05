@@ -18,6 +18,8 @@ import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/register/register/register.component';
 import { AhorcadoComponent } from './modules/Juegos/ahorcado/ahorcado.component';
 import { MayorMenorComponent } from './modules/Juegos/mayor-menor/mayor-menor.component';
+import { PreguntadosComponent } from './modules/Juegos/preguntados/preguntados.component';
+import { DosFotosUnaPalabraComponent } from './modules/Juegos/dos-fotos-una-palabra/dos-fotos-una-palabra.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { MayorMenorComponent } from './modules/Juegos/mayor-menor/mayor-menor.co
     RegisterComponent,
     AhorcadoComponent,
     MayorMenorComponent,
+    PreguntadosComponent,
+    DosFotosUnaPalabraComponent,
   ],
   imports: [
     BrowserModule,
