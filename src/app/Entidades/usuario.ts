@@ -8,6 +8,10 @@ export class Usuario {
 
     email: string = '';
     password: string = '';
+    gano: number = 0;
+    perdio: number = 0;
+    id: string = '';
+    encuesta?: string;
 
     constructor(private firebase: LoginService, private router: Router)
     {
@@ -19,7 +23,8 @@ export class Usuario {
         
         this.firebase.registrar(this.email,this.password)
         .then((res) => {
-          this.Login()
+          this.Login();
+          this.redirigirLogin();
         }).catch(err => 
           lblError.textContent = err.message)
       }
@@ -38,15 +43,6 @@ export class Usuario {
       redirigirLogin()
       {
         this.router.navigate(['/juegos']);
-        // const login = document.getElementById("login");
-        // const regis = document.getElementById("Registrarse");
-        // const desc = document.getElementById("desconectar");
-        // if(login != null)
-        //   login.style.display = 'none';
-        // if(regis != null)  
-        //   regis.style.display = 'none';
-        // if(desc != null)
-        //  desc.style.display = 'block';
       }
 
 }

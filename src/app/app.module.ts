@@ -20,6 +20,9 @@ import { AhorcadoComponent } from './modules/Juegos/ahorcado/ahorcado.component'
 import { MayorMenorComponent } from './modules/Juegos/mayor-menor/mayor-menor.component';
 import { PreguntadosComponent } from './modules/Juegos/preguntados/preguntados.component';
 import { DosFotosUnaPalabraComponent } from './modules/Juegos/dos-fotos-una-palabra/dos-fotos-una-palabra.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http'
+import {  } from '@angular/fire/firestore';
+import { EncuestaComponent } from './components/encuesta/encuesta/encuesta.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { DosFotosUnaPalabraComponent } from './modules/Juegos/dos-fotos-una-pala
     MayorMenorComponent,
     PreguntadosComponent,
     DosFotosUnaPalabraComponent,
+    EncuestaComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { DosFotosUnaPalabraComponent } from './modules/Juegos/dos-fotos-una-pala
     AngularFireAuthModule,
     AngularFireModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

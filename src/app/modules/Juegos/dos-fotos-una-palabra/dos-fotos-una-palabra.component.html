@@ -1,14 +1,23 @@
 <div class="container d-flex row justify-content-center">
 
-    <div class="d-flex column justify-content-center">
-        <img *ngFor="let img of this.fotosService.ListaPalabraFoto[this.randon].FOTOS" src="/assets/img/dosFotos/{{img}}" alt="">
+    <div *ngIf="!this.mostrarSpinner" class="d-flex row justify-content-center">
+        <img class="img-fluid" *ngFor="let img of this.fotosService.ListaPalabraFoto[this.randon].FOTOS"
+            src="/assets/img/dosFotos/{{img}}" alt="">
+    </div>
+
+    <div *ngIf="this.mostrarSpinner" class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
 
     <div class="d-flex column justify-content-center">
-        <label #label *ngFor="let letra of this.fotosService.ListaPalabraFoto[this.randon].PALABRA.split('')" id="{{letra}}"></label>
+        <div class="d-flex row justify-content-center">
+            <label #label class="control-label"
+                *ngFor="let letra of this.fotosService.ListaPalabraFoto[this.randon].PALABRA.split('')"
+                id="{{letra}}"></label>
+        </div>
     </div>
 
-    <div class="d-flex column justify-content-center">
+    <div class="d-flex row justify-content-center">
         <button ion-button (click)="this.eventClickBuscarLetra($event)"
             *ngFor="let boton of this.fotosService.ListaPalabraFoto[this.randon].LETRAS">
             {{boton}}</button>

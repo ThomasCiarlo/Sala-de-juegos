@@ -1,0 +1,79 @@
+<form [formGroup]="form" (ngSubmit)="aceptar()">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" formControlName="nombre" id="nombre" class="form-control">
+        <small class="invalid" *ngIf="form.get('nombre')?.errors &&
+          form.get('nombre')?.touched">
+            El nombre es requerido
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" id="apellido" formControlName="apellido" class="form-control">
+        <small class="invalid" *ngIf="form.get('apellido')?.errors &&
+        form.get('apellido')?.touched">
+            El apellido es requerido
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="Edad" class="form-label">Edad</label>
+        <input type="number" id="edad" formControlName="edad" class="form-control">
+        <small class="invalid" *ngIf="form.get('edad')?.errors &&
+        form.get('edad')?.touched">
+            La edad es requerida
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="Telefono" class="form-label">Telefono</label>
+        <input type="number" id="telefono" formControlName="telefono" class="form-control">
+        <small class="invalid" *ngIf="form.get('telefono')?.errors &&
+        form.get('telefono')?.touched">
+            El telefono es requerido
+        </small>
+    </div>
+    <div class="mb-3 form-check">
+        <label for="Experiencia" class="form-label">Experiencia de usuario:</label>
+        <div class="form-check">
+            <input class="form-check-input" value="mala" id="experiencia" formControlName="experiencia" type="radio"
+                name="flexRadioDefault">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Mala
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" value="excelente" id="experiencia" type="radio"
+                formControlName="experiencia" name="flexRadioDefault" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Excelente
+            </label>
+        </div>
+        <small class="invalid" *ngIf="form.get('experiencia')?.errors &&
+        form.get('experiencia')?.touched">
+            La experiencia es requerida
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="Mejoras" class="form-label">Mejoras:</label>
+        <textarea class="form-control" id="mejoras" formControlName="mejoras" rows="3"></textarea>
+        <small class="invalid" *ngIf="form.get('mejoras')?.errors &&
+        form.get('mejoras')?.touched">
+            Ingrese alguna mejora
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="calificacion" class="form-label">Calificacion</label>
+        <input type="number" id="calificacion" class="form-control" formControlName="calificacion" max="10" min="1">
+        <small class="invalid" *ngIf="form.get('calificacion')?.errors &&
+        form.get('calificacion')?.touched">
+            Ingrese una calificacion del 1 al 10
+        </small>
+    </div>
+    <div class="d-flex column justify-content-center">
+        <button *ngIf="!this.mostrarSpinner" type="submit" [disabled]="form.invalid" class="btn btn-primary">Enviar</button>
+
+        <div *ngIf="this.mostrarSpinner" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+</form>

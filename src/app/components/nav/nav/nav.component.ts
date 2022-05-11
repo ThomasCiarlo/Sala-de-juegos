@@ -39,19 +39,6 @@ export class NavComponent implements OnInit {
   async desconectar()
   {
     const user = this.firebase.singOut();
-    if(await user)
-    {
-      const desconectar = document.getElementById("desconectar");
-      if(desconectar != null)
-      desconectar.style.display = 'none';
-      const login = document.getElementById("login");
-      if(login != null)
-        login.style.display = 'block';
-
-      const desc = document.getElementById("Registrarse");
-      if(desc != null)
-        desc.style.display = 'block';
-    }
   }
 
 

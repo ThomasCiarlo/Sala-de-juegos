@@ -9,27 +9,30 @@
   </div>
 </div>
 
-<nav>
-  <ul>
+<nav class="nav">
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['home']">
-        <span data-text="Home">Home</span>
+        Home
       </a>
     </li>
-    <li class="nav-item">
+    <li *ngIf="estaLogeado" class="nav-item">
       <a class="nav-link" [routerLink]="['juegos']">
-        <span data-text="Juegos">Juegos</span>
+        Juegos
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['puntos']">
-        <span data-text="Puntos">Puntos</span>
+        Puntos
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" [routerLink]="['mylife']">
-        <span data-text="Quien Soy">Quien Soy</span>
+        Quien Soy
       </a>
     </li>
-  </ul>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['encuesta']">
+        Encuesta
+      </a>
+    </li>
 </nav>

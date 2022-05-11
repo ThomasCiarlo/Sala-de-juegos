@@ -1,6 +1,14 @@
+.container
+{
+    margin: 0 auto;
+    width: auto;
+}
+
 #principal
 {
-    width: 900px;
+    margin: 0 auto;
+    width: auto;  
+    padding: 10px;
     border: 2px solid black;
     background-color: #34623F;
     box-shadow: #32371a 0 -10px 40px -10px inset;
@@ -8,6 +16,7 @@
 
 button
 {
+    border-radius: 5px;
     margin: 15px;
     width: 150px;
     height: 70px;

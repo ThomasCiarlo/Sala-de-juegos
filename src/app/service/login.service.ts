@@ -35,4 +35,8 @@ export class LoginService {
   async Logueado() {
     return this.afAuth.authState;
   }
+
+  getCurrentUser() {
+    return this.afAuth.authState.pipe(first()).toPromise();
+  }
 }

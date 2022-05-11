@@ -1,20 +1,21 @@
 <div class="container d-flex row justify-content-center">
     <div id="principal" class="container d-flex row justify-content-center">
-        <h1>Ahorcado</h1>
+        <div class="d-flex row justify-content-center">
+            <img src={{this.VidaImagen}} alt="vidas">
+        </div>
 
-        <div id="palabra" class="container d-flex column justify-content-center">
-            <div>
-                <img src={{this.VidaImagen}} alt="vidas">
+        <div id="palabra" class="container d-flex column justify-content-center"> 
+            <div  *ngIf="!this.mostrarSpinner" class="d-flex row justify-content-center">
+                <label #label class="control-label" *ngFor="let letra of this.palabraElegida.split('')" id="{{letra}}"></label>
+            </div>
+
+            <div *ngIf="this.mostrarSpinner" class="spinner-border text-light" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </div>
         <div class="d-flex row justify-content-center">
             <button ion-button (click)="this.eventBuscarLetra($event)"
                 *ngFor="let boton of this.letras">{{boton}}</button>
-        </div>
-
-        <div>
-            <button class="btn-sec" *ngIf="this.perdio" (click)="this.GameOver()">Reiniciar</button>
-            <button class="btn-sec" (click)="this.GameOver()">Siguiente Palabra</button>
         </div>
     </div>
 </div>

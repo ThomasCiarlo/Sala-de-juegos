@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JugadoresService } from 'src/app/service/jugadores.service';
 
 @Component({
   selector: 'app-mayor-menor',
@@ -12,7 +13,10 @@ export class MayorMenorComponent implements OnInit {
   gano = false;
   perdio = false;
 
-  constructor() { }
+  constructor( public serviceJugadores: JugadoresService) 
+  {
+    this.serviceJugadores.inicializarDatosUsuarioConectado();
+   }
 
   ngOnInit(): void {
   }
@@ -32,6 +36,8 @@ export class MayorMenorComponent implements OnInit {
       this.numero = x;
       this.perdio = false;
       this.gano = true;
+      this.serviceJugadores.gano();
+      this.serviceJugadores.updatePlayer();
     }
     else
     {
@@ -39,6 +45,8 @@ export class MayorMenorComponent implements OnInit {
       this.numero = x;
       this.perdio = true;
       this.gano = false;
+      this.serviceJugadores.perdio();
+      this.serviceJugadores.updatePlayer();
     }
 
     this.Imagen = '/assets/img/mayorOmenor/' + this.numero  + '.PNG';
@@ -55,6 +63,8 @@ export class MayorMenorComponent implements OnInit {
       this.numero = x;
       this.perdio = false;
       this.gano = true;
+      this.serviceJugadores.gano();
+      this.serviceJugadores.updatePlayer();
     }
     else
     {
@@ -62,6 +72,8 @@ export class MayorMenorComponent implements OnInit {
       this.numero = x;
       this.perdio = true;
       this.gano = false;
+      this.serviceJugadores.perdio();
+      this.serviceJugadores.updatePlayer();
     }
 
     this.Imagen = '/assets/img/mayorOmenor/' + this.numero  + '.PNG';
